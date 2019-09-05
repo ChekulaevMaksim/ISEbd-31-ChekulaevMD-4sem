@@ -28,6 +28,7 @@ namespace AircraftBuildingPlantServiceImplementList.Implementations
                     ElementName = source.Elements[i].ElementName
                 });
             }
+
             return result;
         }
         public ElementViewModel GetElement(int id)
@@ -56,7 +57,7 @@ namespace AircraftBuildingPlantServiceImplementList.Implementations
                 }
                 if (source.Elements[i].ElementName == model.ElementName)
                 {
-                    throw new Exception("Уже есть компонент с таким названием");
+                    throw new Exception("Уже есть запчасть с таким названием");
                 }
             }
             source.Elements.Add(new Element
@@ -77,7 +78,7 @@ namespace AircraftBuildingPlantServiceImplementList.Implementations
                 if (source.Elements[i].ElementName == model.ElementName &&
                 source.Elements[i].Id != model.Id)
                 {
-                    throw new Exception("Уже есть компонент с таким названием");
+                    throw new Exception("Уже есть запчасть с таким названием");
                 }
             }
             if (index == -1)
